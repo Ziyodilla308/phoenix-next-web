@@ -4,12 +4,12 @@ import { ChevronDown } from "lucide-react";
 import MobileMenu from "./mobileMenu";
 import MegaMenu from "./megaMenu";
 import { menuType } from "@/db/menuList";
-import { useTranslation } from "react-i18next";
+import type { Locale } from "@/i18n/config";
 
-const Navbar = ({ data }: { data: menuType[] }) => {
+const Navbar = ({ locale, data }: { locale: Locale, data: menuType[] }) => {
   return (
     <>
-      <MobileMenu data={data} />
+      <MobileMenu locale={locale} data={data} />
       <nav className="lg:block hidden">
         <ul className="flex gap-10">
           {data.map((item) => {

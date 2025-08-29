@@ -9,9 +9,10 @@ import { Close } from '@/lib/icon'
 import { usePathname } from 'next/navigation'
 import HeaderExtraInfo from './headerExtraInfo'
 import MegaMenu from './megaMenu'
+import type { Locale } from "@/i18n/config";
 
 
-const MobileMenu = ({ data }: { data: menuType[] }) => {
+const MobileMenu = ({ locale, data }: { locale: Locale, data: menuType[] }) => {
     const pathName = usePathname()
     const [dropDownActive, setDropDownActive] = useState<boolean | string | number>(false)
     const [open, setOpen] = useState(false)
@@ -73,7 +74,7 @@ const MobileMenu = ({ data }: { data: menuType[] }) => {
                         })
                     }
                 </ul>
-                <HeaderExtraInfo />
+                <HeaderExtraInfo locale={locale} />
             </SheetContent>
         </Sheet>
 

@@ -25,7 +25,7 @@ const Header = async ({ locale }: Props) => {
       <div className="lg:h-25 h-16 bg-home-bg-1 [.header-pinned_&]:shadow-md">
         <div className="container flex justify-between items-center h-full relative">
           <div className="w-full">
-            <Navbar data={menuList} />
+            <Navbar locale={locale} data={menuList} />
           </div>
           <Link href={"/"} className="shrink-0">
             <Image
