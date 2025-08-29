@@ -6,10 +6,7 @@ import MobileNavbar from "@/components/sections/header/mobileNavbar";
 const InnerLayout = ({ children }: { children: ReactNode }) => {
     return (
         <>
-            <Header />
             {children}
-            <Footer />
-            <MobileNavbar />
         </>
     )
 }
