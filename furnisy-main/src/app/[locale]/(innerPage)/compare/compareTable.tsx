@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Close, Eye } from '@/lib/icon'
 import { Button } from '@/components/ui/button'
-import ProductQuickView, { ProductQuickViewType } from '@/components/sections/shopDetails/productQuickView'
+import ProductQuickView from '@/components/sections/shopDetails/productQuickView'
 import calcluteDiscount from '@/lib/calcluteDiscount'
 import currencyFormatter from 'currency-formatter';
 import { useAppDispatch, useAppSelector } from '@/lib/reduxHooks'
@@ -66,7 +66,7 @@ const CompareTable = () => {
                                                 }
                                                 <Button
                                                     onClick={() => dispatch(addToCart({ id, price: finalPrice, quantity: 1, thumbnail, title, color, size }))}
-                                                    
+
                                                     size={'sm'}
                                                 >
                                                     Add to Cart
