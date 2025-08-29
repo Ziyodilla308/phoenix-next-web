@@ -6,12 +6,12 @@ import MegaMenu from "./megaMenu";
 import { menuType } from "@/db/menuList";
 import type { Locale } from "@/i18n/config";
 
-const Navbar = ({ locale, data }: { locale: Locale, data: menuType[] }) => {
+const Navbar = ({ locale, data }: { locale: Locale; data: menuType[] }) => {
   return (
     <>
       <MobileMenu locale={locale} data={data} />
       <nav className="lg:block hidden">
-        <ul className="flex gap-10">
+        <ul className="flex justify-end gap-10">
           {data.map((item) => {
             return (
               <li key={item.id} className=" group">

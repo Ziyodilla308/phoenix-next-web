@@ -10,14 +10,16 @@ export function LangSwitcher({ current }: Props) {
   const pathname = usePathname() || "/";
   const router = useRouter();
 
-  const stripped = (() => {
+  const getStrippedPath = () => {
     const parts = pathname.split("/");
     if ((languages as readonly string[]).includes(parts[1])) {
       const rest = parts.slice(2).join("/");
-      return `/${rest}`.replace(/\/+$/, "/") || "/";
+      return `/${rest}`.replace(/\/+$/, "") || "/";
     }
     return pathname;
-  })();
+  };
+
+  const stripped = getStrippedPath();
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -27,9 +29,22 @@ export function LangSwitcher({ current }: Props) {
     },
     [router, stripped],
   );
+
+  const currentLocaleFromUrl: Locale = (() => {
+    const parts = pathname.split("/");
+    if ((languages as readonly string[]).includes(parts[1]))
+      return parts[1] as Locale;
+    return current;
+  })();
+
   return (
     <div>
-      <select name="lang" id="lang" value={current} onChange={handleChange}>
+      <select
+        name="lang"
+        id="lang"
+        value={currentLocaleFromUrl}
+        onChange={handleChange}
+      >
         {(languages as readonly Locale[]).map((lng) => (
           <option key={lng} value={lng}>
             {lng.toUpperCase()}

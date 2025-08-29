@@ -1,46 +1,57 @@
 export interface partnerType {
-    id: number;
-    logo: string
+  id: number;
+  logo: string;
+  code: string;
 }
 export const partnerData: partnerType[] = [
-    {
-        "id": 1,
-        "logo": "/images/home-1/partners/img-1.webp"
-    },
-    {
-        "id": 2,
-        "logo": "/images/home-1/partners/img-2.webp"
-    },
-    {
-        "id": 3,
-        "logo": "/images/home-1/partners/img-3.webp"
-    },
-    {
-        "id": 4,
-        "logo": "/images/home-1/partners/img-4.webp"
-    },
-    {
-        "id": 5,
-        "logo": "/images/home-1/partners/img-5.webp"
-    },
-    {
-        "id": 6,
-        "logo": "/images/home-1/partners/img-1.webp"
-    },
-    {
-        "id": 7,
-        "logo": "/images/home-1/partners/img-2.webp"
-    },
-    {
-        "id": 8,
-        "logo": "/images/home-1/partners/img-3.webp"
-    },
-    {
-        "id": 9,
-        "logo": "/images/home-1/partners/img-4.webp"
-    },
-    {
-        "id": 10,
-        "logo": "/images/home-1/partners/img-5.webp"
-    },
-]
+  {
+    id: 1,
+    logo: "/images/partner_logos/shing_ling.jpg",
+    code: "shing_ling",
+  },
+  {
+    id: 2,
+    logo: "/images/partner_logos/pmt_automation.jpg",
+    code: "pmt_automation",
+  },
+  {
+    id: 3,
+    logo: "/images/partner_logos/gersan.jpg",
+    code: "gersan",
+  },
+  {
+    id: 4,
+    logo: "/images/partner_logos/spartak.jpg",
+    code: "spartak",
+  },
+  {
+    id: 5,
+    logo: "/images/partner_logos/spread_system.jpg",
+    code: "spread_system",
+  },
+  {
+    id: 6,
+    logo: "/images/partner_logos/shing_ling.jpg",
+    code: "shing_ling",
+  },
+  {
+    id: 7,
+    logo: "/images/partner_logos/pmt_automation.jpg",
+    code: "pmt_automation",
+  },
+  {
+    id: 8,
+    logo: "/images/partner_logos/gersan.jpg",
+    code: "gersan",
+  },
+  {
+    id: 9,
+    logo: "/images/partner_logos/spartak.jpg",
+    code: "spartak",
+  },
+  {
+    id: 10,
+    logo: "/images/partner_logos/spread_system.jpg",
+    code: "shing_ling",
+  },
+];

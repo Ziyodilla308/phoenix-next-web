@@ -30,11 +30,11 @@ export const menuList: menuType[] = [
     label: "Home",
     path: "/",
   },
-  {
-    id: 2,
-    label: "Shop",
-    path: "/shop",
-  },
+  // {
+  //   id: 2,
+  //   label: "Shop",
+  //   path: "/shop",
+  // },
   {
     id: 5,
     label: "Pages",

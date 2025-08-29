@@ -237,6 +237,7 @@ import { testimonialData } from "@/db/testimonialsData";
 import { heroData } from "@/db/heroData";
 import { products } from "@/db/products";
 import { FilterData } from "@/db/filterList";
+import { clientData } from "@/db/clientData";
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
@@ -395,6 +396,22 @@ export const getPartnerData = cache(async () => {
   } catch (error) {
     throw new Error(
       "Error in getPartnerData: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getClientsData = cache(async () => {
+  try {
+    // if (process.env.NODE_ENV === "production") {
+    //   const res = await fetch(`${baseUrl}/api/partners`);
+    //   if (!res.ok) throw new Error("Failed to fetch partner data");
+    //   return res.json();
+    // }
+    return clientData;
+  } catch (error) {
+    throw new Error(
+      "Error in getClientsData: " +
         (error instanceof Error ? error.message : String(error)),
     );
   }

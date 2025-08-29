@@ -24,33 +24,32 @@ const Header = async ({ locale }: Props) => {
     <StickyHeader topHeaderContent={<TopHeader />}>
       <div className="lg:h-25 h-16 bg-home-bg-1 [.header-pinned_&]:shadow-md">
         <div className="container flex justify-between items-center h-full relative">
-          <div className="w-full">
-            <Navbar locale={locale} data={menuList} />
-          </div>
           <Link href={"/"} className="shrink-0">
             <Image
-              width={100}
-              height={70}
+              width={190}
+              height={100}
               src="/images/logo/logo_no_bg.png"
               alt="logo"
               priority
               style={{ height: "auto", width: "auto" }}
             />
           </Link>
-          <div className="flex items-center justify-end gap-5 w-full">
-            <SearchPopup data={featuredProducts} />
-            <div className="lg:block hidden">
-              <HeaderExtraInfo locale={locale} />
-            </div>
-            <Link
-              aria-label="user"
-              href={"/login"}
-              className="text-gray-1-foreground cursor-pointer lg:block hidden"
-            >
-              <User />
-            </Link>
-            <ShopingCartSidebar />
+          <div className="w-full">
+            <Navbar locale={locale} data={menuList} />
           </div>
+
+          {/*<div className="flex items-center justify-end gap-5 w-full">*/}
+          {/*  <SearchPopup data={featuredProducts} />*/}
+          {/* */}
+          {/*  /!*<Link*!/*/}
+          {/*  /!*  aria-label="user"*!/*/}
+          {/*  /!*  href={"/login"}*!/*/}
+          {/*  /!*  className="text-gray-1-foreground cursor-pointer lg:block hidden"*!/*/}
+          {/*  /!*>*!/*/}
+          {/*  /!*  <User />*!/*/}
+          {/*  /!*</Link>*!/*/}
+          {/*  /!*<ShopingCartSidebar />*!/*/}
+          {/*</div>*/}
         </div>
       </div>
     </StickyHeader>

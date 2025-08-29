@@ -47,7 +47,7 @@ const Hero = ({ data }: { data: HeroDataType[] }) => {
           }
         }}
       >
-        {data.map(({ description, id, thumbnail, title }, idx) => (
+        {data.map(({ description, id, thumbnail, title, image }, idx) => (
           <SwiperSlide key={id} className="relative bg-black">
             {({ isActive }) => (
               <div className="relative w-full h-full">
@@ -71,7 +71,8 @@ const Hero = ({ data }: { data: HeroDataType[] }) => {
 
                 {/* Content */}
                 <div className="relative z-[3] container lg:pt-[190px] sm:pt-[140px] pt-30 xl:pb-[193px] lg:pb-[170px] pb-[150px]">
-                  <motion.h1
+                  {/* Flex container with text left and img right */}
+                  <motion.div
                     initial={{ y: 90, opacity: 0 }}
                     animate={
                       isActive ? { y: 0, opacity: 1 } : { y: 90, opacity: 0 }
@@ -80,43 +81,36 @@ const Hero = ({ data }: { data: HeroDataType[] }) => {
                       duration: 0.3,
                       delay: isActive ? 0.5 : 0,
                     }}
-                    className="text-[clamp(2.25rem,1.3269rem+4.1026vw,6.25rem)]  leading-[115%] max-w-[810px] text-white font-light mb-2.5"
+                    className="flex items-start justify-between max-w-full gap-8"
                   >
-                    {title}
-                  </motion.h1>
-                  <motion.p
-                    initial={{ y: 90, opacity: 0 }}
-                    animate={
-                      isActive ? { y: 0, opacity: 1 } : { y: 90, opacity: 0 }
-                    }
-                    transition={{
-                      duration: 0.3,
-                      delay: isActive ? 0.7 : 0,
-                    }}
-                    className="max-w-[570px] text-[22px] text-white"
-                  >
-                    {description}
-                  </motion.p>
-                  <motion.div
-                    initial={{ y: 90, opacity: 0 }}
-                    animate={
-                      isActive ? { y: 0, opacity: 1 } : { y: 90, opacity: 0 }
-                    }
-                    transition={{
-                      duration: 0.7,
-                      delay: isActive ? 0.9 : 0,
-                    }}
-                  >
-                    <Button
-                      asChild
-                      size={"medium"}
-                      className="mt-10 max-w-[188px] lg:leading-[170%] leading-[170%] group"
-                    >
-                      <Link href={"/shop"}>
-                        Shop Now{" "}
-                        <ArrowUp className="group-hover:rotate-45 transition-transform duration-500" />{" "}
-                      </Link>
-                    </Button>
+                    {/* Text */}
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-[clamp(2.25rem,1.3269rem+4.1026vw,6.25rem)] leading-[115%] text-white font-light">
+                        {title}
+                      </h1>
+                      <p className="text-[22px] text-white max-w-[570px]">
+                        {description}
+                      </p>
+                      {/*<Button*/}
+                      {/*  asChild*/}
+                      {/*  size={"medium"}*/}
+                      {/*  className="mt-4 max-w-[188px] lg:leading-[170%] leading-[170%] group"*/}
+                      {/*>*/}
+                      {/*  <Link href={"/shop"}>*/}
+                      {/*    Shop Now{" "}*/}
+                      {/*    <ArrowUp className="group-hover:rotate-45 transition-transform duration-500" />*/}
+                      {/*  </Link>*/}
+                      {/*</Button>*/}
+                    </div>
+
+                    {/* Image on the right */}
+                    <div className="flex w-full justify-end">
+                      <img
+                        src={image}
+                        alt="Hero side"
+                        className="w-[1000px] h-[300px] object-contain hidden lg:block"
+                      />
+                    </div>
                   </motion.div>
                 </div>
               </div>
