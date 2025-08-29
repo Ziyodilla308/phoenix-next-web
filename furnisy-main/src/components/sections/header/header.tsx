@@ -21,7 +21,7 @@ const Header = async ({ locale }: Props) => {
   const { featuredProducts }: { featuredProducts: ProductType[] } =
     await getProductsData();
   return (
-    <StickyHeader topHeaderContent={<TopHeader />}>
+    <StickyHeader topHeaderContent={<TopHeader locale={locale} />}>
       <div className="lg:h-25 h-16 bg-home-bg-1 [.header-pinned_&]:shadow-md">
         <div className="container flex justify-between items-center h-full relative">
           <Link href={"/"} className="shrink-0">
