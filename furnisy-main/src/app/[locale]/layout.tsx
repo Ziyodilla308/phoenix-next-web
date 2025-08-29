@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import "../globals.css";
-import StoreProvider from "../StoreProvider";
+import StoreProvider from "./StoreProvider";
 import { Toaster } from "react-hot-toast";
 import { languages, fallbackLng, type Locale } from "@/i18n/config";
 import Header from "@/components/sections/header/header";

@@ -50,7 +50,7 @@ const Error = ({ error, reset }: { error: Error & { digest?: string }, reset: ()
                             className='lg:text-base text-base rounded-sm'
                             asChild
                         >
-                            <Link href={"/"}>Go to homepage</Link>
+                            <Link href={"/public"}>Go to homepage</Link>
                         </Button>
                     }
                 </div>
