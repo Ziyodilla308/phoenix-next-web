@@ -13,17 +13,17 @@ export const metadata: Metadata = {
 }
 
 const ShopOne = async () => {
-    const { featuredProducts } = await getProductsData();
+    // const { featuredProducts } = await getProductsData();
     return (
         <main>
             <PageHeader pageTitle='Shop' currentPage='Shop' />
-            <ProductsView
-                isCategoryShow={false}
-                isSortingProductTop={true}
-                isGridDefaultView={true}
-                isSidebarCategoryHide={false}
-                data={featuredProducts.slice(0, 15)}
-            />
+            {/*<ProductsView*/}
+            {/*    isCategoryShow={false}*/}
+            {/*    isSortingProductTop={true}*/}
+            {/*    isGridDefaultView={true}*/}
+            {/*    isSidebarCategoryHide={false}*/}
+            {/*    data={featuredProducts.slice(0, 15)}*/}
+            {/*/>*/}
             <Newsletter />
             <InstagramGallery />
         </main>

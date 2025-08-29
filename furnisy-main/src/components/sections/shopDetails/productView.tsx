@@ -85,7 +85,7 @@ const ProductsView = ({ isCategoryShow, isSortingProductTop, isGridDefaultView, 
                                 :
                                 <div className='flex flex-col gap-7.5 mt-7.5'>
                                     {
-                                        data.map(({ category, id, price, thumbnail, name }) => {
+                                        data.map(({ category, id, price, thumbnail, name, discountPercentage }) => {
                                              const finalPrice = discountPercentage ? calcluteDiscount(price, discountPercentage) : price;
                                             return (
                                                 <div key={id} className='grid sm:grid-cols-[32.2%_auto] grid-cols-1 items-center gap-7.5'>
@@ -93,44 +93,44 @@ const ProductsView = ({ isCategoryShow, isSortingProductTop, isGridDefaultView, 
                                                         <Image width={341} height={400} sizes='100vw' src={thumbnail} alt="img" className='w-full rounded-xl' />
                                                     </div>
                                                     <div>
-                                                        <Link href={"/product-details"} className='text-[clamp(1.25rem,1.0769rem+0.7692vw,2rem)] leading-[131%] text-secondary-foreground font-medium capitalize line-clamp-1 hover:text-primary-foreground transition-all duration-500'>{title}</Link>
+                                                        {/*<Link href={"/product-details"} className='text-[clamp(1.25rem,1.0769rem+0.7692vw,2rem)] leading-[131%] text-secondary-foreground font-medium capitalize line-clamp-1 hover:text-primary-foreground transition-all duration-500'>{title}</Link>*/}
                                                         <p className='text-gray-1-foreground leading-[155%] mt-2.5'>Elevate your dining experience with the Baxter Colette Chair, a perfect blend of modern elegance and timeless craftsmanship.</p>
                                                         <p className='text-secondary-foreground lg:text-2xl md:text-xl text-lg font-medium mt-5'>
                                                             {discountPercentage ? <del className='text-gray-3-foreground font-normal'>{currencyFormatter.format(price, { code: 'USD' })}</del> : null} {' '}
                                                             <span>{currencyFormatter.format(finalPrice, { code: 'USD' })}</span> USD
                                                         </p>
                                                         <div className='flex gap-2.5 mt-5'>
-                                                            <Button
-                                                                size={"xm"}
-                                                                
-                                                                onClick={() => dispatch(addToCart({ id, thumbnail, quantity: 1, price: finalPrice, color: "red", size: "m", title }))}
-                                                                className='px-4 h-9 lg:text-sm'>
-                                                                Add To Cart
-                                                            </Button>
-                                                            <Tooltip text={"Add To Whitelist"} className='bg-primary text-white' arrowCalss='bg-primary'>
-                                                                <div
-                                                                    onClick={() => dispatch(addToWishlist({ id, date: "May 14, 2025", price, discountPercentage, thumbnail, title, color: colors[0]?.code || '', size: 'xl', stock }))}
-                                                                    className='w-9 h-9 rounded-sm flex items-center justify-center border-[1.5px] border-primary text-secondary-foreground cursor-pointer hover:bg-primary hover:text-white transition-all duration-500'
-                                                                >
-                                                                    <Heart className='w-5 h-5' strokeWidth={0.5} />
-                                                                </div>
-                                                            </Tooltip>
-                                                            <Tooltip text={"Quick view"} className='bg-primary text-white' arrowCalss='bg-primary'>
-                                                                <div
-                                                                    onClick={() => { setIsDialogOpen(true), setProduct({ id, thumbnail, price, discountPercentage, title, stock }) }}
-                                                                    className='w-9 h-9 rounded-sm flex items-center justify-center border-[1.5px] border-primary text-secondary-foreground cursor-pointer hover:bg-primary hover:text-white transition-all duration-500'
-                                                                >
-                                                                    <Eye className='w-5 h-5' strokeWidth={0.5} />
-                                                                </div>
-                                                            </Tooltip>
-                                                            <Tooltip text={"Compare Products"} className='bg-primary text-white' arrowCalss='bg-primary'>
-                                                                <div
-                                                                    onClick={() => dispatch(addToCompare({ id, price, discountPercentage, thumbnail, title, stock, color: colors[0]?.code || '', size: 'xl' }))}
-                                                                    className='w-9 h-9 rounded-sm flex items-center justify-center border-[1.5px] border-primary text-secondary-foreground cursor-pointer hover:bg-primary hover:text-white transition-all duration-500'
-                                                                >
-                                                                    <Shuffle className='w-5 h-5' strokeWidth={0.5} />
-                                                                </div>
-                                                            </Tooltip>
+                                                            {/*<Button*/}
+                                                            {/*    size={"xm"}*/}
+
+                                                            {/*    onClick={() => dispatch(addToCart({ id, thumbnail, quantity: 1, price: finalPrice, color: "red", size: "m", title }))}*/}
+                                                            {/*    className='px-4 h-9 lg:text-sm'>*/}
+                                                            {/*    Add To Cart*/}
+                                                            {/*</Button>*/}
+                                                            {/*<Tooltip text={"Add To Whitelist"} className='bg-primary text-white' arrowCalss='bg-primary'>*/}
+                                                            {/*    <div*/}
+                                                            {/*        onClick={() => dispatch(addToWishlist({ id, date: "May 14, 2025", price, discountPercentage, thumbnail, title, color: colors[0]?.code || '', size: 'xl', stock }))}*/}
+                                                            {/*        className='w-9 h-9 rounded-sm flex items-center justify-center border-[1.5px] border-primary text-secondary-foreground cursor-pointer hover:bg-primary hover:text-white transition-all duration-500'*/}
+                                                            {/*    >*/}
+                                                            {/*        <Heart className='w-5 h-5' strokeWidth={0.5} />*/}
+                                                            {/*    </div>*/}
+                                                            {/*</Tooltip>*/}
+                                                            {/*<Tooltip text={"Quick view"} className='bg-primary text-white' arrowCalss='bg-primary'>*/}
+                                                            {/*    <div*/}
+                                                            {/*        onClick={() => { setIsDialogOpen(true), setProduct({ id, thumbnail, price, discountPercentage, title, stock }) }}*/}
+                                                            {/*        className='w-9 h-9 rounded-sm flex items-center justify-center border-[1.5px] border-primary text-secondary-foreground cursor-pointer hover:bg-primary hover:text-white transition-all duration-500'*/}
+                                                            {/*    >*/}
+                                                            {/*        <Eye className='w-5 h-5' strokeWidth={0.5} />*/}
+                                                            {/*    </div>*/}
+                                                            {/*</Tooltip>*/}
+                                                            {/*<Tooltip text={"Compare Products"} className='bg-primary text-white' arrowCalss='bg-primary'>*/}
+                                                            {/*    <div*/}
+                                                            {/*        onClick={() => dispatch(addToCompare({ id, price, discountPercentage, thumbnail, title, stock, color: colors[0]?.code || '', size: 'xl' }))}*/}
+                                                            {/*        className='w-9 h-9 rounded-sm flex items-center justify-center border-[1.5px] border-primary text-secondary-foreground cursor-pointer hover:bg-primary hover:text-white transition-all duration-500'*/}
+                                                            {/*    >*/}
+                                                            {/*        <Shuffle className='w-5 h-5' strokeWidth={0.5} />*/}
+                                                            {/*    </div>*/}
+                                                            {/*</Tooltip>*/}
                                                         </div>
                                                     </div>
                                                 </div>
