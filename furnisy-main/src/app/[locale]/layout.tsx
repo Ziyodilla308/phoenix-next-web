@@ -53,10 +53,10 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({ children, params }: Props) {
-  const param = (params?.locale ?? "") as Locale;
-  const locale: Locale = (languages as readonly string[]).includes(param)
-    ? param
+async function RootLayout({ children, params }: Props) {
+  const { locale: param } = await params;
+  const locale: Locale = (languages as readonly string[]).includes(param ?? "")
+    ? (param as Locale)
     : fallbackLng;
 
   return (
@@ -75,3 +75,5 @@ export default function RootLayout({ children, params }: Props) {
     </html>
   );
 }
+
+export default RootLayout;

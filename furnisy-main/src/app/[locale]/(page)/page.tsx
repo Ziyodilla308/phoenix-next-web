@@ -22,7 +22,7 @@ const Home = async () => {
     <>
       <Hero data={heroData} />
       <HomeCategory categories={categoriesData} />
-      <FeaturedProducts />
+      {/*<FeaturedProducts />*/}
       <AboutTwo />
       {/*<TopCollections data={topCollections} />*/}
       {/*<AdsSlider data={ads} />*/}

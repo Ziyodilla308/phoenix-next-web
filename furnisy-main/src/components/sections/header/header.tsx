@@ -31,8 +31,10 @@ const Header = async ({ locale }: Props) => {
             <Image
               width={100}
               height={70}
-              src={"/images/logo/logo_no_bg.png"}
+              src="/images/logo/logo_no_bg.png"
               alt="logo"
+              priority
+              style={{ height: "auto", width: "auto" }}
             />
           </Link>
           <div className="flex items-center justify-end gap-5 w-full">
