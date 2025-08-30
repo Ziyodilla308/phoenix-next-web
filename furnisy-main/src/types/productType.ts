@@ -16,4 +16,5 @@ export type ProductType = {
   title: string;
   stock: number;
   colors: TColor[];
+  types?: string;
 };

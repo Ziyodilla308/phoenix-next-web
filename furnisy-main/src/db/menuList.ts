@@ -47,11 +47,11 @@ export const menuList: menuType[] = [
             id: 0,
             title: "Информационный центр",
             items: [
-              {
-                id: 4,
-                label: "Блог",
-                path: "/product-details",
-              },
+              // {
+              //   id: 4,
+              //   label: "Блог",
+              //   path: "/product-details",
+              // },
             ],
           },
         ],
@@ -75,8 +75,7 @@ export const menuList: menuType[] = [
               },
               {
                 id: 3,
-                label:
-                  "Автоматическая карманная окантовочная машина с лазерной резкой",
+                label: "Автоматические машины",
                 path: "/cart",
               },
               {
