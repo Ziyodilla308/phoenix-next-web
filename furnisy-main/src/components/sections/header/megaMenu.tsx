@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 const MegaMenu = ({
   data,
-  isOpen,
+  isOpen = false,
 }: {
   data: MegamenuType[];
   isOpen: boolean;
