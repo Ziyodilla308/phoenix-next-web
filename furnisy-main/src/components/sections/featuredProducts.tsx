@@ -30,12 +30,6 @@ const FeaturedProducts = ({
       <div className="container">
         <div className="flex justify-between items-center mb-5">
           <Title>Featured Products</Title>
-          <Link
-            href={"/shop"}
-            className="text-gray-1-foreground lg:text-xl text-lg border-b border-b-primary hover:text-secondary-foreground duration-500"
-          >
-            View All
-          </Link>
         </div>
         <p className="text-gray-1-foreground mt-3 leading-[166.667%]">
           Explore the best of Furnisy Featured Collection.
@@ -53,7 +47,7 @@ const FeaturedProducts = ({
                 <CardFooter>
                   <CardTitle path="/product-details">{prd.name}</CardTitle>
                   <CardLabel>{prd.description}</CardLabel>
-                  <CardPriceEnhanced price={prd.price} />
+                  {/*<CardPriceEnhanced price={prd.price} />*/}
                 </CardFooter>
               </Card>
             ))

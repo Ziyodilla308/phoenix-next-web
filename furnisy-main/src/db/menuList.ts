@@ -40,22 +40,22 @@ export const menuList: menuType[] = [
     label: "Pages",
     path: "#",
     megaMenu: [
-      {
-        id: 1,
-        menus: [
-          {
-            id: 0,
-            title: "Информационный центр",
-            items: [
-              // {
-              //   id: 4,
-              //   label: "Блог",
-              //   path: "/product-details",
-              // },
-            ],
-          },
-        ],
-      },
+      // {
+      //   id: 1,
+      //   menus: [
+      //     {
+      //       id: 0,
+      //       title: "Информационный центр",
+      //       items: [
+      //         // {
+      //         //   id: 4,
+      //         //   label: "Блог",
+      //         //   path: "/product-details",
+      //         // },
+      //       ],
+      //     },
+      //   ],
+      // },
       {
         id: 2,
         menus: [
@@ -66,68 +66,57 @@ export const menuList: menuType[] = [
               {
                 id: 1,
                 label: "Гладильное оборудование",
-                path: "/about-us",
+                path: "/ironing-equipment",
               },
               {
                 id: 2,
                 label: "SHING LING",
-                path: "/contact-us",
+                path: "https://shingling.com.tw/en/product-2/",
               },
               {
                 id: 3,
                 label: "Автоматические машины",
-                path: "/cart",
+                path: "/auto-machine",
               },
               {
                 id: 4,
                 label: "Компютеризированные лазерные машины",
-                path: "/checkout",
+                path: "/computerized-laser-machines ",
               },
               {
                 id: 5,
                 label: "Автомазированное проектирование",
-                path: "/wishlist",
+                path: "/automated-design",
               },
               {
                 id: 6,
                 label: "Раскройные машины",
-                path: "/compare",
+                path: "/cutting-machines",
               },
               {
                 id: 7,
                 label: "Пресс",
-                path: "/compare",
+                path: "/press",
               },
               {
                 id: 8,
                 label: "Вспомогательные машины",
-                path: "/compare",
+                path: "/auxiliary-machines",
               },
               {
                 id: 9,
                 label: "Аксессуары и запасные части",
-                path: "/compare",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 3,
-        menus: [
-          {
-            id: 0,
-            title: "Контакты",
-            items: [
-              {
-                id: 88,
-                label: "Контакт",
-                path: "/register",
+                path: "/accessories-and-spare-parts",
               },
             ],
           },
         ],
       },
     ],
+  },
+  {
+    id: 2,
+    label: "Contact",
+    path: "/contact-us",
   },
 ];
