@@ -10,7 +10,7 @@ const MegaMenu = ({
   isOpen = false,
 }: {
   data: MegamenuType[];
-  isOpen: boolean;
+  isOpen?: boolean;
 }) => {
   return (
     <div

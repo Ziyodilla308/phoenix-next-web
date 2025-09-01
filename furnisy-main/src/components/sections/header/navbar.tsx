@@ -91,9 +91,7 @@ const Navbar = ({ locale, data }: { locale: Locale; data: menuType[] }) => {
         </ul>
 
         {/* Mega menu alohida chiqadi */}
-        {currentMegaMenu && (
-          <MegaMenu data={currentMegaMenu} isOpen={!!currentMegaMenu} />
-        )}
+        <MegaMenu data={currentMegaMenu || []} isOpen={!!currentMegaMenu} />
       </nav>
     </>
   );

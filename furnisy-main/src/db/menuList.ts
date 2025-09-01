@@ -81,7 +81,7 @@ export const menuList: menuType[] = [
               {
                 id: 4,
                 label: "Компютеризированные лазерные машины",
-                path: "/computerized-laser-machines ",
+                path: "/computerized-laser-machines",
               },
               {
                 id: 5,
