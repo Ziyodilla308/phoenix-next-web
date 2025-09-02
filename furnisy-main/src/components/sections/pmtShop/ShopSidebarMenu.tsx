@@ -2,11 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 
-const filters: string[] = ["Category", "Price", "Brand", "Color", "Size"];
+interface ShopSidebarMenuProps {
+  filters: string[];
+}
 
-export default function ShopSidebarMenu() {
+export default function ShopSidebarMenu({ filters }: ShopSidebarMenuProps) {
   return (
-    <aside className="w-72 bg-background border border-border rounded-xl  p-6 hidden lg:block">
+    <aside className="w-72 bg-background border border-border rounded-xl p-6 hidden lg:block">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-foreground">Filter</h2>

@@ -238,6 +238,14 @@ import { heroData } from "@/db/heroData";
 import { products } from "@/db/products";
 import { FilterData } from "@/db/filterList";
 import { clientData } from "@/db/clientData";
+import { searchIroningEquipmentList } from "@/db/ironingEquipmentListData";
+import { searchAutoMachine } from "@/db/autoMachineListData";
+import { searchComputerizedLaserMachinesData } from "@/db/computerizedLaserMachinesListData";
+import { searchAutomatedData } from "@/db/automatedDesignListData";
+import { searchCuttingMachinesData } from "@/db/cuttingMachinesListData";
+import { searchPressDataList } from "@/db/pressDataList";
+import { searchAuxiliary } from "@/db/auxiliaryDataList";
+import { searchAccessories } from "@/db/accessoriesListData";
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
@@ -460,6 +468,94 @@ export const getTestimonialsData = cache(async () => {
   } catch (error) {
     throw new Error(
       "Error in getTestimonialsData: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getIroningEquipment = cache(async () => {
+  try {
+    return searchIroningEquipmentList;
+  } catch (error) {
+    throw new Error(
+      "Error in getIroningEquipment: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getAutoMachine = cache(async () => {
+  try {
+    return searchAutoMachine;
+  } catch (error) {
+    throw new Error(
+      "Error in getAutoMachine: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getComputerizedLaserMachines = cache(async () => {
+  try {
+    return searchComputerizedLaserMachinesData;
+  } catch (error) {
+    throw new Error(
+      "Error in getComputerizedLaserMachines: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getAutomatedDesign = cache(async () => {
+  try {
+    return searchAutomatedData;
+  } catch (error) {
+    throw new Error(
+      "Error in getAutomatedDesign: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getCuttingMachines = cache(async () => {
+  try {
+    return searchCuttingMachinesData;
+  } catch (error) {
+    throw new Error(
+      "Error in getCuttingMachines: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getPress = cache(async () => {
+  try {
+    return searchPressDataList;
+  } catch (error) {
+    throw new Error(
+      "Error in getPress: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getAuxiliary = cache(async () => {
+  try {
+    return searchAuxiliary;
+  } catch (error) {
+    throw new Error(
+      "Error in getAuxiliary: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getAccessories = cache(async () => {
+  try {
+    return searchAccessories;
+  } catch (error) {
+    throw new Error(
+      "Error in getAccessories: " +
         (error instanceof Error ? error.message : String(error)),
     );
   }

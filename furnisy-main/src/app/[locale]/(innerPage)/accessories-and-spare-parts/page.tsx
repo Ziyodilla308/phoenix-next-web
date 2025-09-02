@@ -1,8 +1,13 @@
 import MyPageHeader from "@/components/sections/myPageHeader";
 import Card from "@/components/ui/card";
 import ShopSidebarMenu from "@/components/sections/pmtShop/ShopSidebarMenu";
+import { getAccessories } from "@/lib/data";
+import { TSearchBarList } from "@/types/shopSidebarType";
 
-const AccessoriesAndSpareParts = () => {
+const AccessoriesAndSpareParts = async () => {
+  const accessoriesData = await getAccessories();
+
+  const filters = accessoriesData.map((item: TSearchBarList) => item.label);
   return (
     <div>
       <MyPageHeader
@@ -18,7 +23,7 @@ const AccessoriesAndSpareParts = () => {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <Card>
-              <ShopSidebarMenu />
+              <ShopSidebarMenu filters={filters} />
             </Card>
           </div>
 
