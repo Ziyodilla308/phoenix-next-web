@@ -14,11 +14,11 @@ const ContactUs = () => {
   return (
     <main>
       <PageHeader pageTitle="Contact Us" currentPage="Contact Us" />
-      <div className="container flex items-center gap-x-4 lg:pt-25 lg:pb-25 pt-15 pb-15">
+      <div className="container lg:pt-25 lg:pb-25 pt-15 pb-15">
         <div className="w-full">
           <ContactLocation />
         </div>
-        <div className="w-[30%]">
+        <div className="w-full mt-4">
           <ContactForm />
         </div>
       </div>
