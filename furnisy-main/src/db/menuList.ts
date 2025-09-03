@@ -27,7 +27,7 @@ export type menuType = {
 export const menuList: menuType[] = [
   {
     id: 1,
-    label: "Home",
+    label: "Products",
     path: "/",
   },
   // {
