@@ -71,7 +71,7 @@ export const menuList: menuType[] = [
               {
                 id: 2,
                 label: "SHING LING",
-                path: "https://shingling.com.tw/en/product-2/",
+                path: "/shing-ling",
               },
               {
                 id: 3,

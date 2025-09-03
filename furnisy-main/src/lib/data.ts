@@ -246,6 +246,7 @@ import { searchCuttingMachinesData } from "@/db/cuttingMachinesListData";
 import { searchPressDataList } from "@/db/pressDataList";
 import { searchAuxiliary } from "@/db/auxiliaryDataList";
 import { searchAccessories } from "@/db/accessoriesListData";
+import { searchShingLing } from "@/db/shingLingDataList";
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
@@ -556,6 +557,17 @@ export const getAccessories = cache(async () => {
   } catch (error) {
     throw new Error(
       "Error in getAccessories: " +
+        (error instanceof Error ? error.message : String(error)),
+    );
+  }
+});
+
+export const getShingLing = cache(async () => {
+  try {
+    return searchShingLing;
+  } catch (error) {
+    throw new Error(
+      "Error in getShingLing: " +
         (error instanceof Error ? error.message : String(error)),
     );
   }
