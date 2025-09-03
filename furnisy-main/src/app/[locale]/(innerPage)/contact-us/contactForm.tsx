@@ -60,7 +60,7 @@ const ContactForm = () => {
               href={"mailto:info@logistip.com"}
               className="text-gray-1-foreground leading-[150%] mt-3 inline-block hover:text-secondary-foreground transition-all duration-500"
             >
-              erdogandikagach@yahoo.com
+              mac_erdogan@yahoo.com
             </Link>
           </div>
         </div>
@@ -133,7 +133,7 @@ const ContactForm = () => {
               href={"mailto:info@logistip.com"}
               className="text-gray-1-foreground leading-[150%] mt-3 inline-block hover:text-secondary-foreground transition-all duration-500"
             >
-              erdogandikagach@yahoo.com
+              mac_erdogan@yahoo.com
             </Link>
           </div>
         </div>
@@ -206,7 +206,7 @@ const ContactForm = () => {
               href={"mailto:info@logistip.com"}
               className="text-gray-1-foreground leading-[150%] mt-3 inline-block hover:text-secondary-foreground transition-all duration-500"
             >
-              erdogandikagach@yahoo.com
+              mac_erdogan@yahoo.com
             </Link>
           </div>
         </div>

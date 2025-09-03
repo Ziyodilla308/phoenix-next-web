@@ -3,6 +3,8 @@ import React from "react";
 import Title from "../ui/title";
 import { CheckIcon } from "lucide-react";
 
+// 16-я Центральноазиатская Международная выставка "Текстильное оборудование и технологии – CAITME 2025"
+
 const AboutTwo = () => {
   return (
     <section className="lg:pt-25 lg:pb-25 pt-15 pb-15">

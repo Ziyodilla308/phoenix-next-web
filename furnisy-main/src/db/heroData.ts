@@ -9,23 +9,25 @@ export type HeroDataType = {
 export const heroData: HeroDataType[] = [
   {
     id: 1,
-    title: "Professional & Modern Tone",
-    description: "Precision Sewing Solutions for Every Need.",
+    title: "SL-8904 — ",
+    description: "Автоматизированная сверхскоростная швейная машина-оверлок.",
     thumbnail: "/images/home-1/hero/swn.mp4",
-    image: "/images/shing_ling_new/11.png",
+    image: "/images/banner/2.png",
   },
   {
     id: 2,
-    title: "Customer-Oriented Tone",
-    description: "Your Partner in Sewing Excellence.",
-    thumbnail: "/images/home-1/hero/swn.mp4",
-    image: "/images/shing_ling_new/12.png",
+    title: "SL-8302 — ",
+    description:
+      "высокоскоростная автоматизированная прямострочная швейная машина.",
+    thumbnail: "/images/home-1/hero/swn-2.mp4",
+    image: "/images/banner/5.png",
   },
   {
     id: 3,
-    title: "Creative & Inspiring Tone",
-    description: "Sew Your Vision Into Reality.",
-    thumbnail: "/images/home-1/hero/swn.mp4",
-    image: "/images/shing_ling_new/13.png",
+    title: "SL-008-12064P ",
+    description:
+      "Промышленная 12-х игольная многофункциональная швейная машина.",
+    thumbnail: "/images/home-1/hero/swn-3.mp4",
+    image: "/images/banner/3.png",
   },
 ];

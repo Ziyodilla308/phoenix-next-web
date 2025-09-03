@@ -4,6 +4,7 @@ import React from "react";
 import ContactForm from "./contactForm";
 import ContactLocation from "./contactLocation";
 import { Metadata } from "next";
+import Title from "@/components/ui/title";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -15,11 +16,17 @@ const ContactUs = () => {
     <main>
       <PageHeader pageTitle="Contact Us" currentPage="Contact Us" />
       <div className="container lg:pt-25 lg:pb-25 pt-15 pb-15">
+        <h1>Office</h1>
         <div className="w-full">
           <ContactLocation />
         </div>
         <div className="w-full mt-4">
           <ContactForm />
+        </div>
+
+        <div className="w-full mt-4">
+          <h1>Ishlab chiqarish</h1>
+          {/*yandex map*/}
         </div>
       </div>
     </main>

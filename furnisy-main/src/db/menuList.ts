@@ -27,7 +27,7 @@ export type menuType = {
 export const menuList: menuType[] = [
   {
     id: 1,
-    label: "Products",
+    label: "Home",
     path: "/",
   },
   // {
@@ -37,7 +37,7 @@ export const menuList: menuType[] = [
   // },
   {
     id: 5,
-    label: "Pages",
+    label: "Products",
     path: "#",
     megaMenu: [
       // {
@@ -66,17 +66,17 @@ export const menuList: menuType[] = [
               {
                 id: 1,
                 label: "Гладильное оборудование",
-                path: "/ironing-equipment",
+                path: "/ironing-equipment", // only for PMT partner (HOME page) featured products
               },
               {
                 id: 2,
                 label: "SHING LING",
-                path: "/shing-ling",
+                path: "/shing-ling", // same products (HOME page) featured products
               },
               {
                 id: 3,
                 label: "Автоматические машины",
-                path: "/auto-machine",
+                path: "/auto-machine", // only for PMT_automation (HOME page) featured products
               },
               {
                 id: 4,
