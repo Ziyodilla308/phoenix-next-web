@@ -17,4 +17,5 @@ export type ProductType = {
   stock: number;
   colors: TColor[];
   types?: string;
+  video?: string;
 };

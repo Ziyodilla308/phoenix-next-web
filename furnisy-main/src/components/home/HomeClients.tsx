@@ -8,15 +8,16 @@ import ClientSlider from "@/components/sections/shopDetails/clientSlider";
 import { partnerType } from "@/db/partnerData";
 import { clientType } from "@/db/clientData";
 import { ProductType } from "@/types/productType";
+import { TShingLing } from "@/types/shingLingProductType";
 
 const HomeClient = ({
   partnerData,
   clientData,
-  featuredProducts, // 👈 qo‘shildi
+  searchShingLing,
 }: {
   partnerData: partnerType[];
   clientData: clientType[];
-  featuredProducts: ProductType[]; // 👈 typing qo‘shildi
+  searchShingLing: TShingLing[];
 }) => {
   const [selectedPartner, setSelectedPartner] = useState<string | null>(null);
 
@@ -32,7 +33,7 @@ const HomeClient = ({
 
       <div id="fproducts">
         <FeaturedProducts
-          products={featuredProducts} // 👈 propni to‘g‘ri uzatyapmiz
+          products={searchShingLing}
           selectedPartner={selectedPartner}
         />
       </div>

@@ -3,4 +3,5 @@ export type TShingLing = {
   label: string;
   navigate?: string;
   images?: string;
+  types?: string;
 };

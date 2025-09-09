@@ -116,6 +116,11 @@ export const menuList: menuType[] = [
   },
   {
     id: 2,
+    label: "Catalog",
+    path: "/catalog-pmt",
+  },
+  {
+    id: 3,
     label: "Contact",
     path: "/contact-us",
   },

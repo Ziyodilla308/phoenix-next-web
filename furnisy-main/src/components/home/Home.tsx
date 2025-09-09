@@ -6,7 +6,7 @@ import {
   getClientsData,
   getHeroData,
   getPartnerData,
-  getProductsData,
+  getShingLing,
 } from "@/lib/data";
 import HomeClient from "./HomeClients";
 
@@ -14,7 +14,7 @@ const Home = async () => {
   const heroData = await getHeroData();
   const partnerData = await getPartnerData();
   const clientData = await getClientsData();
-  const { featuredProducts } = await getProductsData();
+  const shingLingData = await getShingLing();
 
   return (
     <>
@@ -22,7 +22,7 @@ const Home = async () => {
       <HomeClient
         partnerData={partnerData}
         clientData={clientData}
-        featuredProducts={featuredProducts}
+        searchShingLing={shingLingData}
       />
       <AboutTwo />
       <Newsletter />
