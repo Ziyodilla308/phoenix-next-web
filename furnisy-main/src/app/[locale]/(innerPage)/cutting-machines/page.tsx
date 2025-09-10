@@ -12,7 +12,7 @@ const CuttingMachines = async () => {
     <div>
       <MyPageHeader
         title="Cutting Machines"
-        description="Har qanday to'lovlar va pul o'tkazmalarini onlayn amalga oshirish uchun kartangizni Davr Mobile ilovasiga bog'lashingiz mumkin"
+        description="Cutting Machines"
         imageSrc="/images/page-header/ironing-equipment-img.png"
         imageAlt="Ironing Equipment"
       />
@@ -31,12 +31,7 @@ const CuttingMachines = async () => {
           <div className="lg:col-span-3">
             <Card>
               <div className="p-6">
-                <h2 className="text-xl font-semibold mb-4">
-                  Products will go here
-                </h2>
-                <p className="text-muted-foreground">
-                  Bu joyda mahsulotlar ro‘yxati chiqadi.
-                </p>
+                <p className="text-muted-foreground">В процессе</p>
               </div>
             </Card>
           </div>

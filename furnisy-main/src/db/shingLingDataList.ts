@@ -3,28 +3,28 @@ import { TShingLing } from "@/types/shingLingProductType";
 export const searchShingLing: TShingLing[] = [
   {
     id: 1,
-    label: "ПЛОСКОШОВНЫЙ INTERLOCK",
+    label: "Плоскошовный интерлок",
     navigate: "https://shingling.com.tw/en/product-category/sl-700-series/",
     images: "/images/shing_ling_new/23.png",
     types: "shing_ling",
   },
   {
     id: 2,
-    label: "Interlock Машины",
+    label: "Интерлок машины",
     navigate: "https://shingling.com.tw/en/product-tag/interlock-machine-en/",
     images: "/images/shing_ling_new/12.png",
     types: "shing_ling",
   },
   {
     id: 3,
-    label: "закрепочная пуговичная машины",
+    label: "Закрепочная пуговичная машины",
     navigate: "https://shingling.com.tw/en/product-category/sl-1900-series/",
     images: "/images/shing_ling_new/18.png",
     types: "shing_ling",
   },
   {
     id: 4,
-    label: "петельная машина",
+    label: "Петельная машина",
     navigate: "https://shingling.com.tw/en/product-category/sl-1790s-series/",
     images: "/images/shing_ling_new/1000005504.png",
     types: "shing_ling",
@@ -38,7 +38,7 @@ export const searchShingLing: TShingLing[] = [
   },
   {
     id: 6,
-    label: "ОВЕРЛОКИ",
+    label: "Оверлоки",
     navigate: "https://shingling.com.tw/en/product-category/sl-898-series/",
     images: "/images/shing_ling_new/2.png",
     types: "shing_ling",

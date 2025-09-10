@@ -20,7 +20,7 @@ const TopHeader = ({ locale }: Props) => {
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-[11px]">
             <p className="text-base leading-[150%] text-gray-1-foreground">
-              {t("follwus")}:
+              {t("followUs")}:
             </p>
             <div className="flex items-center gap-2.5">
               <Link href={"#"} aria-label="facebook">

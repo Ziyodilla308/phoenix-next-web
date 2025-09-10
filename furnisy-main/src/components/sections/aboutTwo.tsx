@@ -17,30 +17,23 @@ const AboutTwo = () => {
             {/* Top Large Image */}
             <div className="mb-6">
               <Image
-                src={"/images/happy/pmt_happy_1.jpg"}
+                src={"/images/vistavka.jpg"}
                 alt="Top Image"
-                width={350}
-                height={300}
+                width={450}
+                height={400}
+                className="w-full h-auto object-cover rounded-xl"
+              />
+            </div>
+            <div className="mb-6">
+              <Image
+                src={"/images/vistavka.jpg"}
+                alt="Top Image"
+                width={450}
+                height={400}
                 className="w-full h-auto object-cover rounded-xl"
               />
             </div>
             {/* Bottom 2 Images */}
-            <div className="grid grid-cols-2 gap-6">
-              <Image
-                src={"/images/happy/pmt_happy_2.jpg"}
-                alt="Bottom Left"
-                width={350}
-                height={300}
-                className="w-full h-full object-cover rounded-lg"
-              />
-              <Image
-                src={"/images/happy/pmt_happy_2.jpg"}
-                alt="Bottom Right"
-                width={350}
-                height={300}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
           </div>
 
           {/* RIGHT SIDE - DESCRIPTION */}
