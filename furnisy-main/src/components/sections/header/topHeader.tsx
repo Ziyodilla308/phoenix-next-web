@@ -23,25 +23,14 @@ const TopHeader = ({ locale }: Props) => {
               {t("followUs")}:
             </p>
             <div className="flex items-center gap-2.5">
-              <Link href={"#"} aria-label="facebook">
+              <Link
+                href={"https://www.facebook.com/erdogan.dikagac/"}
+                aria-label="facebook"
+              >
                 <Facebook />
               </Link>
               <Link
-                href={"#"}
-                aria-label="x"
-                className="text-gray-1-foreground border border-[#CACACA] w-6 h-6 rounded-full flex items-center justify-center"
-              >
-                <Twitter />
-              </Link>
-              <Link
-                href={"#"}
-                aria-label="linkedin"
-                className="text-gray-1-foreground border border-[#CACACA] w-6 h-6 rounded-full flex items-center justify-center"
-              >
-                <Linkedin />
-              </Link>
-              <Link
-                href={"#"}
+                href={"https://www.instagram.com/mac_erdogan/"}
                 aria-label="instagram"
                 className="text-gray-1-foreground border border-[#CACACA] w-6 h-6 rounded-full flex items-center justify-center"
               >
@@ -54,7 +43,7 @@ const TopHeader = ({ locale }: Props) => {
               href={"#"}
               className="text-base text-gray-1-foreground block leading-[150%] "
             >
-              erdogandikagach@yahoo.com
+              mac_erdogan@yahoo.com
             </Link>
             <Separator
               orientation="vertical"

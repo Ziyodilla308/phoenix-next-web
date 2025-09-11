@@ -27,7 +27,7 @@ export type menuType = {
 export const menuList: menuType[] = [
   {
     id: 1,
-    label: "Home",
+    label: "Главная",
     path: "/",
   },
   // {
@@ -37,7 +37,7 @@ export const menuList: menuType[] = [
   // },
   {
     id: 5,
-    label: "Products",
+    label: "Продукты",
     path: "#",
     megaMenu: [
       // {
@@ -116,12 +116,12 @@ export const menuList: menuType[] = [
   },
   {
     id: 2,
-    label: "Catalog",
+    label: "Каталог",
     path: "/catalog-pmt",
   },
   {
     id: 3,
-    label: "Contact",
+    label: "Контакты",
     path: "/contact-us",
   },
 ];

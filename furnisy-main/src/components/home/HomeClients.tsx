@@ -24,7 +24,7 @@ const HomeClient = ({
   return (
     <>
       <div className="mt-30 container text-center">
-        <Title>Our Partners</Title>
+        <Title>Наши партнёры</Title>
         <PartnerSlider
           partners={partnerData}
           onSelectPartner={(code) => setSelectedPartner(code)}
@@ -39,7 +39,7 @@ const HomeClient = ({
       </div>
 
       <div className="mt-30 container text-center">
-        <Title>Our Clients</Title>
+        <Title>Наши клиенты</Title>
         <ClientSlider clients={clientData} />
       </div>
     </>

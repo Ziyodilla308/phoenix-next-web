@@ -39,12 +39,11 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Furnisy - E-Commerce Template",
-  description:
-    "Furnisy - e-commerce template create by technology next.js, tailwind css, shadcn",
+  title: "PMT - Phoenix Machine Technology",
+  description: "PMT - PMT - a leading manufacturer of sewing machines",
   keywords: [
     "ecommerce",
-    "furnisy",
+    "sewing",
     "product",
     "site",
     "react.js",
