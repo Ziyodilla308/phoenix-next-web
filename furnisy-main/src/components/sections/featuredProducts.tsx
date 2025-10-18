@@ -21,7 +21,7 @@ const FeaturedProducts = ({
   return (
     <section className="bg-home-bg-1 lg:pt-25 lg:pb-25 pt-15 pb-15">
       <div className="container">
-        <div className="mt-  w-full">
+        <div className="w-full">
           {filteredProducts?.length > 0 ? (
             <ShingLingClient shingLingData={filteredProducts} />
           ) : (

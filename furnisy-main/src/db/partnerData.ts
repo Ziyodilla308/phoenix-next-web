@@ -26,7 +26,7 @@ export const partnerData: partnerType[] = [
   },
   {
     id: 5,
-    logo: "/images/partner_logos/spread_system.jpg",
+    logo: "/images/partner_logos/pmt_spread_system.png",
     code: "spread_system",
   },
   {
@@ -51,7 +51,7 @@ export const partnerData: partnerType[] = [
   },
   {
     id: 10,
-    logo: "/images/partner_logos/spread_system.jpg",
+    logo: "/images/partner_logos/pmt_spread_system.png",
     code: "shing_ling",
   },
 ];

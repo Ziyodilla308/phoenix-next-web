@@ -3,18 +3,21 @@ import Hero from "@/components/sections/hero";
 import AboutTwo from "@/components/sections/aboutTwo";
 import Newsletter from "@/components/sections/newsletter";
 import {
+  getBlogData,
   getClientsData,
   getHeroData,
   getPartnerData,
   getShingLing,
 } from "@/lib/data";
 import HomeClient from "./HomeClients";
+import BlogSlider from "@/components/sections/blogs/blogSlider";
 
 const Home = async () => {
   const heroData = await getHeroData();
   const partnerData = await getPartnerData();
   const clientData = await getClientsData();
   const shingLingData = await getShingLing();
+  const blogSliderData = await getBlogData();
 
   return (
     <>
@@ -24,7 +27,8 @@ const Home = async () => {
         clientData={clientData}
         searchShingLing={shingLingData}
       />
-      <AboutTwo />
+      {/*<AboutTwo />*/}
+      <BlogSlider blogs={blogSliderData} />
       <Newsletter />
     </>
   );

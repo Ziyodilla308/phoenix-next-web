@@ -17,8 +17,8 @@ const ShingLingClient = ({ shingLingData }: Props) => {
             key={item.id}
             className="bg-white shadow-sm rounded-lg gap-8 w-full"
           >
-            <div className="relative mx-4 -mt-6 h-70 overflow-hidden rounded-xl bg-clip-border shadow-lg group">
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-600 via-gray-500 to-gray-600 opacity-90"></div>
+            <div className="relative mx-4 -mt-6 h-70 overflow-hidden rounded-xl bg-clip-border group">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#caccd1] via-[#caccd1] to-[#caccd1] opacity-90 rounded-full"></div>
               <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] animate-pulse"></div>
 
               <div className="absolute inset-0 flex items-center justify-center">

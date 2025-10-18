@@ -4,7 +4,9 @@ import { useCallback } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { languages, type Locale } from "@/i18n/config";
 
-type Props = { current: Locale };
+type Props = {
+  current: Locale;
+};
 
 export function LangSwitcher({ current }: Props) {
   const pathname = usePathname() || "/";
@@ -24,6 +26,7 @@ export function LangSwitcher({ current }: Props) {
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
       const newLocale = e.target.value as Locale;
+      localStorage.setItem("lang", newLocale);
       const newPath = `/${newLocale}${stripped === "/" ? "" : stripped}`;
       router.push(newPath);
     },

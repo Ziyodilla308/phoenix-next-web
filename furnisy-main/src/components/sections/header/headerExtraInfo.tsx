@@ -11,11 +11,8 @@ export type Props = {
 const HeaderExtraInfo = ({ locale }: Props) => {
   useEffect(() => {
     const savedLang = localStorage.getItem("lang") || "uz";
+    console.log(savedLang);
   }, []);
-
-  const handleLangChange = (value: string) => {
-    localStorage.setItem("lang", value);
-  };
 
   return (
     <div className="flex lg:flex-row flex-col lg:items-center gap-5 mt-5 lg:mt-0">

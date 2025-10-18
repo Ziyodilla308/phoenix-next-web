@@ -8,6 +8,7 @@ import "swiper/css";
 import { Navigation } from "swiper/modules";
 import BlogCard from "./blogCard";
 import { BlogType } from "@/types/blogType";
+import { Video } from "lucide-react";
 
 const BlogSlider = ({ blogs }: { blogs: BlogType[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -79,17 +80,26 @@ const BlogSlider = ({ blogs }: { blogs: BlogType[] }) => {
           modules={[Navigation]}
         >
           {blogs.map(
-            ({ category, date, id, thumbnail, title, author, description }) => (
+            ({
+              category,
+              date,
+              id,
+              thumbnail,
+              title,
+              author,
+              description,
+              hashTag,
+            }) => (
               <SwiperSlide key={id}>
                 <BlogCard>
                   <BlogCard.Img>
-                    <Image
-                      width={552}
-                      height={340}
+                    <video
                       src={thumbnail}
-                      alt="img"
-                      className="rounded-xl w-full h-auto max-h-[340px] object-cover aspect-[4/3]"
-                      sizes="100vw"
+                      muted
+                      playsInline
+                      loop
+                      autoPlay={true}
+                      className="w-full"
                     />
                   </BlogCard.Img>
 
@@ -98,10 +108,12 @@ const BlogSlider = ({ blogs }: { blogs: BlogType[] }) => {
                     category={category}
                     author={{ name: author?.name || "", href: "" }}
                   />
+                  <BlogCard.Description className="mt-3">
+                    {hashTag}
+                  </BlogCard.Description>
+                  {/*<BlogCard.Title href="/blog-single">{title}</BlogCard.Title>*/}
 
-                  <BlogCard.Title href="/blog-single">{title}</BlogCard.Title>
-
-                  <BlogCard.Description>{description}</BlogCard.Description>
+                  {/*<BlogCard.Description>{description}</BlogCard.Description>*/}
                 </BlogCard>
               </SwiperSlide>
             ),

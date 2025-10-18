@@ -54,6 +54,7 @@ export const metadata: Metadata = {
 
 async function RootLayout({ children, params }: Props) {
   const { locale: param } = await params;
+  // const getLang = localStorage.getItem("lang") || "uz";
   const locale: Locale = (languages as readonly string[]).includes(param ?? "")
     ? (param as Locale)
     : fallbackLng;

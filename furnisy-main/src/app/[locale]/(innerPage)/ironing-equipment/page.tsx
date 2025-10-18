@@ -30,8 +30,30 @@ const IroningEquipment = async () => {
           {/* Content */}
           <div className="lg:col-span-3">
             <Card>
-              <div className="p-6">
-                <p className="text-muted-foreground">В процессе</p>
+              <div className="grid grid-cols-4 p-6 max-w-full">
+                <img
+                  width={200}
+                  src="/images/ironing-equipment/max-sq1.png"
+                  alt="max-sq1"
+                />
+
+                <img
+                  width={200}
+                  src="/images/ironing-equipment/max-sq1.png"
+                  alt="max-sq1"
+                />
+
+                <img
+                  width={200}
+                  src="/images/ironing-equipment/max-sq1.png"
+                  alt="max-sq1"
+                />
+
+                <img
+                  width={200}
+                  src="/images/ironing-equipment/max-sq1.png"
+                  alt="max-sq1"
+                />
               </div>
             </Card>
           </div>
